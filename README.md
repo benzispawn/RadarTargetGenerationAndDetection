@@ -63,7 +63,7 @@ title('FFT 1D');
 axis ([0 200 0 1]);
 xlabel('Range');
 ```
-![result](https://github.com/benzispawn/RadarTargetGenerationAndDetection/blob/master/fotos/fig_2.png)
+![result](https://github.com/benzispawn/RadarTargetGenerationAndDetection/blob/master/fotos/fig_1.png)
 
 #### 4. FFT Operation - 2D
 
