@@ -83,7 +83,7 @@ figure('Name', 'Range from First FFT'),surf(doppler_axis,range_axis,RDM);
 <img width="480" src="/home/benzi/radar_detect/fig_2.png">
 
 #### 5. 2D CFAR
-Setting the training and guard cell of the grid.
+Setting the training and guard cell of the grid. 
 
 ```Matlab
 Tcr = 10;
@@ -123,7 +123,7 @@ for j=1:Nd-2*(Tcr+Gcr)
   end
 end
 
-Finally we show the result.
+Finally we show the result. The values of training cell and guard cells were at the beginning 5 and 2 for Tcr and Tcd, 5 and 2 for Gcr and Gcd, respectively. We choose randomly at first but changing some of the values on training cells was enough to get a homogenous CFAR sign.  
 ```Matlab
 figure('Name', 'CA-CFAR'),surf(doppler_axis,range_axis, CFAR_sig);
 colorbar;

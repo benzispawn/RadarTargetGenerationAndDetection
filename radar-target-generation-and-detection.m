@@ -15,8 +15,8 @@ clc;
 % define the target's initial position and velocity. Note : Velocity
 % remains contant
 c = 3e8; %Speed of light
-v = 20; %Velocity
-si = 0; %Initial Range
+v = 10; %Velocity
+si = 50; %Initial Range
 RR = 1; %Range Resolution 
 Rm = 200; % Max Range
 
@@ -144,7 +144,7 @@ RDM = 10*log10(RDM) ;
 %dimensions
 doppler_axis = linspace(-100,100,Nd);
 range_axis = linspace(-200,200,Nr/2)*((Nr/2)/400);
-figure,surf(doppler_axis,range_axis,RDM);
+figure('Name', 'Range Doppler'),surf(doppler_axis,range_axis,RDM);
 
 %% CFAR implementation
 
@@ -152,12 +152,12 @@ figure,surf(doppler_axis,range_axis,RDM);
 
 % *%TODO* :
 %Select the number of Training Cells in both the dimensions.
-Tcr = 10;
-Tcd = 4;
+Tcr = 5;
+Tcd = 2;
 % *%TODO* :
 %Select the number of Guard Cells in both dimensions around the Cell under 
 %test (CUT) for accurate estimation
-Gcr = 5;
+Gcr = 3;
 Gcd = 2;
 % *%TODO* :
 % offset the threshold by SNR value in dB
