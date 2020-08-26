@@ -63,7 +63,7 @@ title('FFT 1D');
 axis ([0 200 0 1]);
 xlabel('Range');
 ```
-<img width="480" src="/home/benzi/radar_detect/fig_1.png">
+![result](https://github.com/benzispawn/RadarTargetGenerationAndDetection/blob/master/fotos/fig_2.png)
 
 #### 4. FFT Operation - 2D
 
@@ -80,7 +80,7 @@ doppler_axis = linspace(-100,100,Nd);
 range_axis = linspace(-200,200,Nr/2)*((Nr/2)/400);
 figure('Name', 'Range from First FFT'),surf(doppler_axis,range_axis,RDM);
 ```
-<img width="480" src="/home/benzi/radar_detect/fig_2.png">
+![result](https://github.com/benzispawn/RadarTargetGenerationAndDetection/blob/master/fotos/fig_2.png)
 
 #### 5. 2D CFAR
 Setting the training and guard cell of the grid. 
@@ -122,11 +122,12 @@ for j=1:Nd-2*(Tcr+Gcr)
       end
   end
 end
-
+```
 Finally we show the result. The values of training cell and guard cells were at the beginning 5 and 2 for Tcr and Tcd, 5 and 2 for Gcr and Gcd, respectively. We choose randomly at first but changing some of the values on training cells was enough to get a homogenous CFAR sign.  
+
 ```Matlab
 figure('Name', 'CA-CFAR'),surf(doppler_axis,range_axis, CFAR_sig);
 colorbar;
 
 ```
-<img width="480" src="/home/benzi/radar_detect/fig_3.png">
+![result](https://github.com/benzispawn/RadarTargetGenerationAndDetection/blob/master/fotos/fig_3.png)
